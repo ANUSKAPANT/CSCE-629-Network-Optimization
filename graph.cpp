@@ -53,14 +53,15 @@ void Graph::generateGraph1()
   {
     for (int j = 0; j < n; j++)
     {
-      if (deg[i] == 6)
-        break;
+      if (deg[i] == 6) break;
       int x = rand() % n;
-      if (!isEdge(i, x) && deg[i] < degree && deg[x] < degree)
+      if (!isEdge(i, x))
       {
-        addEdge(i, x);
-        deg[i]++;
-        deg[x]++;
+        if(deg[i] < degree && deg[x] < degree) {
+          addEdge(i, x);
+          deg[i] = deg[i] + 1;
+          deg[x] = deg[x] + 1;
+        }
       }
     }
   }

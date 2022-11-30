@@ -97,6 +97,7 @@ int main()
 
   for(int i = 1; i <= 5; i++) {
     Graph G1(n, degree, percent);
+    cout << "Generating Graph #1........" << endl;
     G1.generateGraph1();
 
     printf("----------------GRAPH#1 RUNNING FOR 5 PAIRS OF SOURCE AND DESTINATION--------------------");
@@ -105,6 +106,7 @@ int main()
 
   for(int i = 1; i <= 5; i++) {
     Graph G2(n, degree, percent);
+    cout << "Generating Graph #2........" << endl;
     G2.generateGraph2();
 
     printf("----------------GRAPH#2 RUNNING FOR 5 PAIRS OF SOURCE AND DESTINATION--------------------");
